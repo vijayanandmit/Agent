@@ -16,7 +16,7 @@ def get_openai_api_key():
     return api_key
 
 OPENAI_API_KEY = get_openai_api_key()
-llm_config = {"model": "gpt-3.5-turbo"}
+llm_config = {"model": "gpt-4"}
 
 from autogen import ConversableAgent
 
@@ -27,12 +27,12 @@ agent = ConversableAgent(
 )
 
 reply = agent.generate_reply(
-    messages=[{"content": "Tell me a joke.", "role": "user"}]
+    messages=[{"content": "Tell me 2 joke.", "role": "user"}]
 )
 print(reply)
 
 reply = agent.generate_reply(
-    messages=[{"content": "Repeat the joke.", "role": "user"}]
+    messages=[{"content": "teach me langchain.", "role": "user"}]
 )
 print(reply)
 
